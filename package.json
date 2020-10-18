@@ -59,5 +59,8 @@
     "README.md",
     "LICENSE",
     "dist/*"
-  ]
+  ],
+  "engines": {
+    "node": ">=12"
+  }
 }
