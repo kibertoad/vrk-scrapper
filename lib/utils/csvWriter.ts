@@ -1,5 +1,5 @@
 import { createObjectCsvWriter } from 'csv-writer'
-import { CandidateVotes } from './scrapperTypes'
+import { CandidateVotes } from '../types/scrapperTypes'
 import { stat, mkdir } from 'fs/promises'
 
 function ensureDirectoryExists(dir: string) {

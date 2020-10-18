@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`csvWriter writes single mandate results correctly 1`] = `
-"KANDIDATAS,IŠKĖLĖ,PADUOTŲ BALSŲ SKAIČIUS,APYLINKĖSE,PAŠTU,IŠ VISO,% ;NUO GALIOJANČIŲ BIULETENIŲ
+"KANDIDATAS,IŠKĖLĖ,PADUOTŲ BALSŲ SKAIČIUS,APYLINKĖSE,PAŠTU,IŠ VISO,% NUO GALIOJANČIŲ BIULETENIŲ
 Mykolas MAJAUSKAS,Tėvynės sąjunga – Lietuvos krikščionys demokratai,4465,1790,6255,\\"29,71\\",\\"28,92\\"
 Viktorija ČMILYTĖ-NIELSEN,Lietuvos Respublikos liberalų sąjūdis,4582,1467,6049,\\"28,73\\",\\"27,97\\"
 Vytenis ŠKARNULIS,Laisvės partija,1543,623,2166,\\"10,29\\",\\"10,02\\"

@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { parseDistrictResults } from '../lib/districtResultsParser'
-import { writeSingleMandateResults } from '../lib/csvWriter'
+import { writeSingleMandateResults } from '../lib/utils/csvWriter'
 import { FileTestHelper } from 'cli-testlab'
 
 const tableHTML = fs

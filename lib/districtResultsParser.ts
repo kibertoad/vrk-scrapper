@@ -1,20 +1,72 @@
 import parse5, { DefaultTreeParentNode, Document } from 'parse5'
-import { CandidateVotes, DistrictResults } from './scrapperTypes'
+import { CandidateVotes, DistrictVotes } from './types/scrapperTypes'
 
 const linebreakRegex = /\r\n|\n|\r/gm
+const IS_INDEPENDENT_TEXT = 'Išsikėlė pati'
 
-function chunk<T = any[]>(arr: T[], chunkSize: number): T[][] {
+type CandidateColumns = {
+  nameColumn: any
+  partyValue: string
+  votesValue: string
+}
+
+// Structure of this data is not very consistent become amount of cells is different for independent candidates
+function extractCandidateCells<T = any[]>(cells: any[]): CandidateColumns[] {
+  const result: CandidateColumns[] = []
+  let nextCandidate: Partial<CandidateColumns> = {}
+
+  let foundName = false
+  let foundParty = false
+  let isIndependent = false
+  for (let cell of cells) {
+    if (!foundName) {
+      nextCandidate.nameColumn = cell
+      foundName = true
+      continue
+    }
+    if (!foundParty && cell.childNodes) {
+      nextCandidate.partyValue = cell.childNodes[0].value
+      foundParty = true
+      continue
+    }
+
+    // For independent candidates that fact is included in votes element. yay for consistency
+    if (!foundParty && cell.value?.includes?.(IS_INDEPENDENT_TEXT)) {
+      nextCandidate.partyValue = IS_INDEPENDENT_TEXT
+      foundParty = true
+      isIndependent = true
+    }
+
+    if (foundParty) {
+      nextCandidate.votesValue = isIndependent
+        ? cell.value.replace(IS_INDEPENDENT_TEXT, '')
+        : cell.value
+
+      foundName = false
+      foundParty = false
+      isIndependent = false
+      result.push(nextCandidate as CandidateColumns)
+      nextCandidate = {}
+    }
+  }
+  return result
+}
+
+function chunkAny(arr: any[], chunkSize: number): any[] {
   const R = []
   for (let i = 0, len = arr.length; i < len; i += chunkSize) R.push(arr.slice(i, i + chunkSize))
   return R
 }
 
-function transformCandidateValues(candidateRowsChunk: any[]): CandidateVotes {
-  const name = candidateRowsChunk[0].childNodes[0].value
-  const party = candidateRowsChunk[2].childNodes[0].value
-  const voteValues = candidateRowsChunk[3].value
+function transformCandidateValues(candidateRowsChunk: CandidateColumns): CandidateVotes {
+  const name = candidateRowsChunk.nameColumn.childNodes[0].value
+  const party = candidateRowsChunk.partyValue
+  const voteValues: string[] = candidateRowsChunk.votesValue
     .trim()
+    .replace(/\t/g, ' ')
     .replace(/    /g, ' ')
+    .replace(/  /g, ' ')
+    .replace(/  /g, ' ')
     .replace(/  /g, ' ')
     .replace(/  /g, ' ')
     .replace(linebreakRegex, '')
@@ -33,20 +85,31 @@ function transformCandidateValues(candidateRowsChunk: any[]): CandidateVotes {
   }
 }
 
-export function parseDistrictResults(text: string): DistrictResults {
+export function parseDistrictResults(text: string): DistrictVotes {
   const sanitizedText = text
     .trim()
-    .replace(/\&nbsp/g, ' ')
+    .replace(/\&nbsp;/g, ' ')
     .replace(linebreakRegex, '')
   const districtHtml: DefaultTreeParentNode = parse5.parse(sanitizedText) as DefaultTreeParentNode
   // @ts-ignore
   const candidateRows = districtHtml.childNodes[0].childNodes[1].childNodes
   const headerRow = candidateRows.shift()
-  const attrHeaders = headerRow.value.trim().replace(/   /g, '  ').replace(/   /g, '  ').split('  ')
+  const attrHeaders = headerRow.value
+    .trim()
+    .replace(/\t/g, ' ')
+    .replace(/   /g, '  ')
+    .replace(/   /g, '  ')
+    .split('  ')
 
-  const candidateRowsChunksWithSummary = chunk(candidateRows, 4)
-  const candidateRowsChunks = candidateRowsChunksWithSummary.slice(0, 15)
-  const summaryRows = candidateRowsChunksWithSummary.slice(15, 18)
+  const candidateRowsChunksWithSummary = extractCandidateCells(candidateRows)
+  const candidateRowsChunks = candidateRowsChunksWithSummary.slice(
+    0,
+    candidateRowsChunksWithSummary.length - 3
+  )
+  const summaryRows = candidateRowsChunksWithSummary.slice(
+    candidateRowsChunksWithSummary.length - 3,
+    candidateRowsChunksWithSummary.length
+  )
   const candidateValues = candidateRowsChunks.map(transformCandidateValues)
 
   return {

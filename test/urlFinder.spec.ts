@@ -1,4 +1,4 @@
-import { findAllUrls } from '../lib/urlFinder'
+import { findAllUrls } from '../lib/utils/urlFinder'
 import fs from 'fs'
 import path from 'path'
 
