@@ -30,7 +30,9 @@ async function getDistrictUrls(browser: Browser): Promise<readonly string[]> {
 
 async function getDistrictResults(browser: Browser, districtUrl: string): Promise<DistrictResults> {
   const page = await browser.newPage()
-  await page.goto(`${VRK_ROOT_URL}${districtUrl}`)
+  const resolvedUrl = `${VRK_ROOT_URL}${districtUrl}`
+  console.log(`Opening ${resolvedUrl}`)
+  await page.goto(resolvedUrl)
   await page.waitForSelector(DISTRICT_NAME_SELECTOR)
 
   const districtName = await page.$eval(DISTRICT_NAME_SELECTOR, (el) => {
@@ -65,17 +67,17 @@ export async function scrapeSingleMandateData(): Promise<void> {
     const districtUrls = await getDistrictUrls(browser)
 
     for (const districtUrl of districtUrls) {
-          const districtResults = await getDistrictResults(browser, districtUrl)
-    // const districtResults = await getDistrictResults(browser, districtUrls[18])
-    await writeSingleMandateResults(
-      districtResults.name,
-      districtResults.votes.attrHeaders,
-      districtResults.votes.candidateValues
-    )
-    console.log(`Finished outputting district: ${districtResults.name}\n`)
-    console.log('Sleeping...')
-    await sleep(2000 + Math.random() * 1000)
-    console.log('Woke up...')
+      const districtResults = await getDistrictResults(browser, districtUrl)
+      // const districtResults = await getDistrictResults(browser, districtUrls[24])
+      await writeSingleMandateResults(
+        districtResults.name,
+        districtResults.votes.attrHeaders,
+        districtResults.votes.candidateValues
+      )
+      console.log(`Finished outputting district: ${districtResults.name}\n`)
+      console.log('Sleeping...')
+      await sleep(2000 + Math.random() * 1000)
+      console.log('Woke up...')
     }
   } finally {
     await browser.close()

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`districtResultsParser parses results correctly 1`] = `
+exports[`districtResultsParser parses results correctly district 1 1`] = `
 Object {
   "attrHeaders": Array [
     "Kandidatas",
@@ -151,7 +151,7 @@ Object {
 }
 `;
 
-exports[`districtResultsParser parses results correctly for a different structure 1`] = `
+exports[`districtResultsParser parses results correctly district 19 1`] = `
 Object {
   "attrHeaders": Array [
     "Kandidatas",
@@ -200,13 +200,13 @@ Object {
       "totalVotes": "1728",
     },
     Object {
-      "districtVotes": "1452",
-      "mailVotes": "252",
+      "districtVotes": "i",
+      "mailVotes": "1452",
       "name": "Liukrecija NAVICKIENĖ",
-      "party": "Išsikėlė pati",
-      "percentFromAll": "9,26",
-      "percentFromValid": "9,84",
-      "totalVotes": "1704",
+      "party": "Išsikėlė pats(-i)",
+      "percentFromAll": "9,84",
+      "percentFromValid": "1704",
+      "totalVotes": "252",
     },
     Object {
       "districtVotes": "1101",
@@ -261,6 +261,254 @@ Object {
       "percentFromAll": "2,02",
       "percentFromValid": "2,15",
       "totalVotes": "372",
+    },
+  ],
+}
+`;
+
+exports[`districtResultsParser parses results correctly district 25 1`] = `
+Object {
+  "attrHeaders": Array [
+    "Kandidatas",
+    "Iškėlė",
+    "apylinkėse",
+    "paštu",
+    "iš viso",
+    "% nuo galiojančių biuletenių",
+    "% nuo dalyvavusių rinkėjų",
+  ],
+  "candidateValues": Array [
+    Object {
+      "districtVotes": "2991",
+      "mailVotes": "908",
+      "name": "Stasys TUMĖNAS",
+      "party": "Lietuvos valstiečių ir žaliųjų sąjunga",
+      "percentFromAll": "21,48",
+      "percentFromValid": "23,11",
+      "totalVotes": "3899",
+    },
+    Object {
+      "districtVotes": "2110",
+      "mailVotes": "1055",
+      "name": "Martynas ŠIURKUS",
+      "party": "Tėvynės sąjunga – Lietuvos krikščionys demokratai",
+      "percentFromAll": "17,43",
+      "percentFromValid": "18,76",
+      "totalVotes": "3165",
+    },
+    Object {
+      "districtVotes": "s",
+      "mailVotes": "1575",
+      "name": "Zakiras MEDŽIDOVAS",
+      "party": "Išsikėlė pats(-i)",
+      "percentFromAll": "11,64",
+      "percentFromValid": "1964",
+      "totalVotes": "389",
+    },
+    Object {
+      "districtVotes": "1201",
+      "mailVotes": "430",
+      "name": "Aušra SIMONAVIČIŪTĖ",
+      "party": "Lietuvos Respublikos liberalų sąjūdis",
+      "percentFromAll": "8,98",
+      "percentFromValid": "9,67",
+      "totalVotes": "1631",
+    },
+    Object {
+      "districtVotes": "1250",
+      "mailVotes": "298",
+      "name": "Marijus VELIČKA",
+      "party": "Darbo partija",
+      "percentFromAll": "8,53",
+      "percentFromValid": "9,17",
+      "totalVotes": "1548",
+    },
+    Object {
+      "districtVotes": "975",
+      "mailVotes": "278",
+      "name": "Vidmantas NORVAIŠAS",
+      "party": "Lietuvos socialdemokratų partija",
+      "percentFromAll": "6,90",
+      "percentFromValid": "7,43",
+      "totalVotes": "1253",
+    },
+    Object {
+      "districtVotes": "s",
+      "mailVotes": "673",
+      "name": "Arūnas RIMKUS",
+      "party": "Išsikėlė pats(-i)",
+      "percentFromAll": "5,04",
+      "percentFromValid": "851",
+      "totalVotes": "178",
+    },
+    Object {
+      "districtVotes": "570",
+      "mailVotes": "199",
+      "name": "Raimondas ŠUKYS",
+      "party": "Lietuvos žaliųjų partija",
+      "percentFromAll": "4,24",
+      "percentFromValid": "4,56",
+      "totalVotes": "769",
+    },
+    Object {
+      "districtVotes": "465",
+      "mailVotes": "130",
+      "name": "Gediminas BERŽINIS BERŽINSKAS",
+      "party": "Krikščionių sąjunga",
+      "percentFromAll": "3,28",
+      "percentFromValid": "3,53",
+      "totalVotes": "595",
+    },
+    Object {
+      "districtVotes": "330",
+      "mailVotes": "120",
+      "name": "Tomas BIELINSKAS",
+      "party": "Lietuvos socialdemokratų darbo partija",
+      "percentFromAll": "2,48",
+      "percentFromValid": "2,67",
+      "totalVotes": "450",
+    },
+    Object {
+      "districtVotes": "316",
+      "mailVotes": "76",
+      "name": "Petras BLOŽĖ",
+      "party": "Centro partija - tautininkai",
+      "percentFromAll": "2,16",
+      "percentFromValid": "2,32",
+      "totalVotes": "392",
+    },
+    Object {
+      "districtVotes": "201",
+      "mailVotes": "60",
+      "name": "Antanas NAVAKAUSKAS",
+      "party": "Partija LIETUVA – VISŲ",
+      "percentFromAll": "1,44",
+      "percentFromValid": "1,55",
+      "totalVotes": "261",
+    },
+    Object {
+      "districtVotes": "78",
+      "mailVotes": "17",
+      "name": "Aleksandr FIODOROV",
+      "party": "Lietuvos lenkų rinkimų akcija - Krikščioniškų šeimų sąjunga",
+      "percentFromAll": "0,52",
+      "percentFromValid": "0,56",
+      "totalVotes": "95",
+    },
+  ],
+}
+`;
+
+exports[`districtResultsParser parses results correctly district 27 1`] = `
+Object {
+  "attrHeaders": Array [
+    "Kandidatas",
+    "Iškėlė",
+    "apylinkėse",
+    "paštu",
+    "iš viso",
+    "% nuo galiojančių biuletenių",
+    "% nuo dalyvavusių rinkėjų",
+  ],
+  "candidateValues": Array [
+    Object {
+      "districtVotes": "2321",
+      "mailVotes": "852",
+      "name": "Indiana GRIGIENĖ",
+      "party": "Tėvynės sąjunga – Lietuvos krikščionys demokratai",
+      "percentFromAll": "19,48",
+      "percentFromValid": "20,58",
+      "totalVotes": "3173",
+    },
+    Object {
+      "districtVotes": "2431",
+      "mailVotes": "500",
+      "name": "Deividas LABANAVIČIUS",
+      "party": "Lietuvos valstiečių ir žaliųjų sąjunga",
+      "percentFromAll": "17,99",
+      "percentFromValid": "19,01",
+      "totalVotes": "2931",
+    },
+    Object {
+      "districtVotes": "s",
+      "mailVotes": "2161",
+      "name": "Povilas URBŠYS",
+      "party": "Išsikėlė pats(-i)",
+      "percentFromAll": "17,07",
+      "percentFromValid": "2631",
+      "totalVotes": "470",
+    },
+    Object {
+      "districtVotes": "1179",
+      "mailVotes": "210",
+      "name": "Sandra JAKŠTIENĖ",
+      "party": "Darbo partija",
+      "percentFromAll": "8,53",
+      "percentFromValid": "9,01",
+      "totalVotes": "1389",
+    },
+    Object {
+      "districtVotes": "1055",
+      "mailVotes": "293",
+      "name": "Justinas JASIUKAITIS",
+      "party": "Lietuvos socialdemokratų partija",
+      "percentFromAll": "8,28",
+      "percentFromValid": "8,74",
+      "totalVotes": "1348",
+    },
+    Object {
+      "districtVotes": "939",
+      "mailVotes": "357",
+      "name": "Ieva KONKOVĖ",
+      "party": "Laisvės partija",
+      "percentFromAll": "7,96",
+      "percentFromValid": "8,41",
+      "totalVotes": "1296",
+    },
+    Object {
+      "districtVotes": "719",
+      "mailVotes": "237",
+      "name": "Egidijus ŽUKAUSKAS",
+      "party": "Lietuvos Respublikos liberalų sąjūdis",
+      "percentFromAll": "5,87",
+      "percentFromValid": "6,20",
+      "totalVotes": "956",
+    },
+    Object {
+      "districtVotes": "581",
+      "mailVotes": "91",
+      "name": "Marius MARKUCKAS",
+      "party": "Nacionalinis susivienijimas",
+      "percentFromAll": "4,13",
+      "percentFromValid": "4,36",
+      "totalVotes": "672",
+    },
+    Object {
+      "districtVotes": "305",
+      "mailVotes": "85",
+      "name": "Mantas LELIUKAS",
+      "party": "Lietuvos žaliųjų partija",
+      "percentFromAll": "2,39",
+      "percentFromValid": "2,53",
+      "totalVotes": "390",
+    },
+    Object {
+      "districtVotes": "296",
+      "mailVotes": "63",
+      "name": "Svajūnas KINDERIS",
+      "party": "Lietuvos socialdemokratų darbo partija",
+      "percentFromAll": "2,20",
+      "percentFromValid": "2,33",
+      "totalVotes": "359",
+    },
+    Object {
+      "districtVotes": "235",
+      "mailVotes": "36",
+      "name": "Valentinas PEČININAS",
+      "party": "Krikščionių sąjunga",
+      "percentFromAll": "1,66",
+      "percentFromValid": "1,76",
+      "totalVotes": "271",
     },
   ],
 }

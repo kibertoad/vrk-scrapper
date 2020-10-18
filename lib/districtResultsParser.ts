@@ -2,7 +2,8 @@ import parse5, { DefaultTreeParentNode, Document } from 'parse5'
 import { CandidateVotes, DistrictVotes } from './types/scrapperTypes'
 
 const linebreakRegex = /\r\n|\n|\r/gm
-const IS_INDEPENDENT_TEXT = 'Išsikėlė pati'
+const IS_INDEPENDENT_TEXT = 'Išsikėlė pat'
+const IS_INDEPENDENT_TEXT_OUTPUT = 'Išsikėlė pats(-i)'
 
 type CandidateColumns = {
   nameColumn: any
@@ -32,7 +33,7 @@ function extractCandidateCells<T = any[]>(cells: any[]): CandidateColumns[] {
 
     // For independent candidates that fact is included in votes element. yay for consistency
     if (!foundParty && cell.value?.includes?.(IS_INDEPENDENT_TEXT)) {
-      nextCandidate.partyValue = IS_INDEPENDENT_TEXT
+      nextCandidate.partyValue = IS_INDEPENDENT_TEXT_OUTPUT
       foundParty = true
       isIndependent = true
     }
@@ -97,7 +98,7 @@ export function parseDistrictResults(text: string): DistrictVotes {
   const attrHeaders = headerRow.value
     .trim()
     .replace(linebreakRegex, '')
-      // we don't need this parent value
+    // we don't need this parent value
     .replace('Paduotų balsų skaičius', '')
     .replace(/\t/g, ' ')
     .replace(/\s{3,8}/g, '  ')
