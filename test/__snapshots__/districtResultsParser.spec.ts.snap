@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`districtResultsParser parses results correctly 1`] = `
+Object {
+  "attrHeaders": Array [
+    "Kandidatas",
+    "Iškėlė",
+    "Paduotų balsų skaičius",
+    "apylinkėse",
+    "paštu",
+    "iš viso",
+    "% ;nuo galiojančių biuletenių",
+    "% ;nuo dalyvavusių rinkėjų",
+  ],
+  "candidateValues": Array [
+    Object {
+      "name": "Mykolas MAJAUSKAS",
+      "party": "Tėvynės sąjunga – Lietuvos krikščionys demokratai",
+      "voteValues": Array [
+        "4465",
+        "1790",
+        "6255",
+        "29,71",
+        "28,92",
+      ],
+    },
+    Object {
+      "name": "Viktorija ČMILYTĖ-NIELSEN",
+      "party": "Lietuvos Respublikos liberalų sąjūdis",
+      "voteValues": Array [
+        "4582",
+        "1467",
+        "6049",
+        "28,73",
+        "27,97",
+      ],
+    },
+    Object {
+      "name": "Vytenis ŠKARNULIS",
+      "party": "Laisvės partija",
+      "voteValues": Array [
+        "1543",
+        "623",
+        "2166",
+        "10,29",
+        "10,02",
+      ],
+    },
+    Object {
+      "name": "Darius KUOLYS",
+      "party": "Politinė partija „Lietuvos sąrašas“",
+      "voteValues": Array [
+        "826",
+        "217",
+        "1043",
+        "4,95",
+        "4,82",
+      ],
+    },
+    Object {
+      "name": "Dovilė ŠAKALIENĖ",
+      "party": "Lietuvos socialdemokratų partija",
+      "voteValues": Array [
+        "767",
+        "254",
+        "1021",
+        "4,85",
+        "4,72",
+      ],
+    },
+    Object {
+      "name": "Vitalija JANKAUSKAITĖ-MILČIUVIENĖ",
+      "party": "Lietuvos valstiečių ir žaliųjų sąjunga",
+      "voteValues": Array [
+        "711",
+        "239",
+        "950",
+        "4,51",
+        "4,39",
+      ],
+    },
+    Object {
+      "name": "Kristina DZERŽINSKA",
+      "party": "Lietuvos lenkų rinkimų akcija - Krikščioniškų šeimų sąjunga",
+      "voteValues": Array [
+        "526",
+        "75",
+        "601",
+        "2,85",
+        "2,78",
+      ],
+    },
+    Object {
+      "name": "Rasa IVANAUSKIENĖ",
+      "party": "Darbo partija",
+      "voteValues": Array [
+        "461",
+        "126",
+        "587",
+        "2,79",
+        "2,71",
+      ],
+    },
+    Object {
+      "name": "Zenonas VAIGAUSKAS",
+      "party": "Lietuvos socialdemokratų darbo partija",
+      "voteValues": Array [
+        "415",
+        "118",
+        "533",
+        "2,53",
+        "2,46",
+      ],
+    },
+    Object {
+      "name": "Robertas RAMANAUSKAS",
+      "party": "Nacionalinis susivienijimas",
+      "voteValues": Array [
+        "409",
+        "90",
+        "499",
+        "2,37",
+        "2,31",
+      ],
+    },
+    Object {
+      "name": "Diana STOMIENĖ",
+      "party": "Partija „Laisvė ir teisingumas“",
+      "voteValues": Array [
+        "265",
+        "89",
+        "354",
+        "1,68",
+        "1,64",
+      ],
+    },
+    Object {
+      "name": "Inga LAURUŠONĖ",
+      "party": "Lietuvos žaliųjų partija",
+      "voteValues": Array [
+        "263",
+        "63",
+        "326",
+        "1,55",
+        "1,51",
+      ],
+    },
+    Object {
+      "name": "Sakalas GORODECKIS",
+      "party": "Centro partija - tautininkai",
+      "voteValues": Array [
+        "255",
+        "53",
+        "308",
+        "1,46",
+        "1,42",
+      ],
+    },
+    Object {
+      "name": "Arvydas AKSTINAVIČIUS",
+      "party": "Krikščionių sąjunga",
+      "voteValues": Array [
+        "165",
+        "58",
+        "223",
+        "1,06",
+        "1,03",
+      ],
+    },
+    Object {
+      "name": "Andrius NIKITINAS",
+      "party": "Partija LIETUVA – VISŲ",
+      "voteValues": Array [
+        "119",
+        "21",
+        "140",
+        "0,66",
+        "0,65",
+      ],
+    },
+  ],
+}
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`csvWriter writes single mandate results correctly 1`] = `
+"KANDIDATAS,IŠKĖLĖ,PADUOTŲ BALSŲ SKAIČIUS,APYLINKĖSE,PAŠTU,IŠ VISO,% ;NUO GALIOJANČIŲ BIULETENIŲ
+Mykolas MAJAUSKAS,Tėvynės sąjunga – Lietuvos krikščionys demokratai,4465,1790,6255,\\"29,71\\",\\"28,92\\"
+Viktorija ČMILYTĖ-NIELSEN,Lietuvos Respublikos liberalų sąjūdis,4582,1467,6049,\\"28,73\\",\\"27,97\\"
+Vytenis ŠKARNULIS,Laisvės partija,1543,623,2166,\\"10,29\\",\\"10,02\\"
+Darius KUOLYS,Politinė partija „Lietuvos sąrašas“,826,217,1043,\\"4,95\\",\\"4,82\\"
+Dovilė ŠAKALIENĖ,Lietuvos socialdemokratų partija,767,254,1021,\\"4,85\\",\\"4,72\\"
+Vitalija JANKAUSKAITĖ-MILČIUVIENĖ,Lietuvos valstiečių ir žaliųjų sąjunga,711,239,950,\\"4,51\\",\\"4,39\\"
+Kristina DZERŽINSKA,Lietuvos lenkų rinkimų akcija - Krikščioniškų šeimų sąjunga,526,75,601,\\"2,85\\",\\"2,78\\"
+Rasa IVANAUSKIENĖ,Darbo partija,461,126,587,\\"2,79\\",\\"2,71\\"
+Zenonas VAIGAUSKAS,Lietuvos socialdemokratų darbo partija,415,118,533,\\"2,53\\",\\"2,46\\"
+Robertas RAMANAUSKAS,Nacionalinis susivienijimas,409,90,499,\\"2,37\\",\\"2,31\\"
+Diana STOMIENĖ,Partija „Laisvė ir teisingumas“,265,89,354,\\"1,68\\",\\"1,64\\"
+Inga LAURUŠONĖ,Lietuvos žaliųjų partija,263,63,326,\\"1,55\\",\\"1,51\\"
+Sakalas GORODECKIS,Centro partija - tautininkai,255,53,308,\\"1,46\\",\\"1,42\\"
+Arvydas AKSTINAVIČIUS,Krikščionių sąjunga,165,58,223,\\"1,06\\",\\"1,03\\"
+Andrius NIKITINAS,Partija LIETUVA – VISŲ,119,21,140,\\"0,66\\",\\"0,65\\"
+"
+`;

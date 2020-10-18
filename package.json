@@ -13,19 +13,24 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --config=jest.config.json",
+    "test:update-snapshots": "jest --config=jest.config.json -u",
     "test:ci": "npm run lint && npm run test",
     "lint": "eslint --format codeframe \"lib/**/*.ts\" \"test/**/*.ts\"",
     "prettier": "prettier --write \"{lib,test}/**/*.{js,ts}\" index.ts"
   },
   "dependencies": {
+    "csv-writer": "^1.6.0",
+    "parse5": "^6.0.1",
     "puppeteer": "^5.3.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",
     "@types/node": "^14.11.10",
+    "@types/parse5": "^5.0.3",
     "@types/puppeteer": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "cli-testlab": "^2.0.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "eslint-plugin-prettier": "^3.1.4",
