@@ -96,9 +96,11 @@ export function parseDistrictResults(text: string): DistrictVotes {
   const headerRow = candidateRows.shift()
   const attrHeaders = headerRow.value
     .trim()
+    .replace(linebreakRegex, '')
+      // we don't need this parent value
+    .replace('Paduotų balsų skaičius', '')
     .replace(/\t/g, ' ')
-    .replace(/   /g, '  ')
-    .replace(/   /g, '  ')
+    .replace(/\s{3,8}/g, '  ')
     .split('  ')
 
   const candidateRowsChunksWithSummary = extractCandidateCells(candidateRows)

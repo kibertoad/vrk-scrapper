@@ -5,7 +5,6 @@ Object {
   "attrHeaders": Array [
     "Kandidatas",
     "Iškėlė",
-    "Paduotų balsų skaičius",
     "apylinkėse",
     "paštu",
     "iš viso",
@@ -157,7 +156,6 @@ Object {
   "attrHeaders": Array [
     "Kandidatas",
     "Iškėlė",
-    "Paduotų balsų skaičius",
     "apylinkėse",
     "paštu",
     "iš viso",
